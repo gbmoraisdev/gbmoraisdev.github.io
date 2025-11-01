@@ -7,6 +7,20 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
         
+        :root {
+    /* cores */
+    --white: #ffffff;
+    --black: #0a0a0a;
+    --gray: #cccccc;
+    --principal: #00ff88;
+    --secondary: #00ccff; 
+    --red: #ff4757;
+
+    /* fontes */
+    --font-space-grotesk: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-jetbrains-mono: 'JetBrains Mono', monospace;
+}
+
         * {
             margin: 0;
             padding: 0;
@@ -23,18 +37,18 @@
 
         /* Neon glow effects */
         .neon-text {
-            color: #00ff88;
+            color: var(--principal);
             text-shadow: 
-                0 0 5px #00ff88,
-                0 0 10px #00ff88,
-                0 0 15px #00ff88,
-                0 0 20px #00ff88;
+                0 0 5px var(--principal),
+                0 0 10px var(--principal),
+                0 0 15px var(--principal),
+                0 0 20px var(--principal);
         }
 
         .neon-border {
-            border: 2px solid #00ff88;
+            border: 2px solid var(--principal);
             box-shadow: 
-                0 0 10px #00ff88,
+                0 0 10px var(--principal),
                 inset 0 0 10px rgba(0, 255, 136, 0.1);
         }
 
@@ -82,9 +96,9 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 24px;
             font-weight: 700;
-            color: #00ff88;
+            color: var(--principal);
             text-decoration: none;
-            text-shadow: 0 0 10px #00ff88;
+            text-shadow: 0 0 10px var(--principal);
             letter-spacing: -1px;
         }
 
@@ -113,14 +127,14 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #00ff88;
+            background: var(--principal);
             transition: width 0.3s ease;
-            box-shadow: 0 0 5px #00ff88;
+            box-shadow: 0 0 5px var(--principal);
         }
 
         .nav-links a:hover {
-            color: #00ff88;
-            text-shadow: 0 0 5px #00ff88;
+            color: var(--principal);
+            text-shadow: 0 0 5px var(--principal);
         }
 
         .nav-links a:hover::after {
@@ -165,7 +179,7 @@
         }
 
         .hero h1 .highlight {
-            background: linear-gradient(45deg, #00ff88, #00ccff);
+            background: linear-gradient(45deg, var(--principal), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -175,22 +189,22 @@
         @keyframes neon-flicker {
             0%, 100% {
                 text-shadow: 
-                    0 0 5px #00ff88,
-                    0 0 10px #00ff88,
-                    0 0 15px #00ff88;
+                    0 0 5px var(--principal),
+                    0 0 10px var(--principal),
+                    0 0 15px var(--principal);
             }
             50% {
                 text-shadow: 
-                    0 0 2px #00ff88,
-                    0 0 5px #00ff88,
-                    0 0 8px #00ff88;
+                    0 0 2px var(--principal),
+                    0 0 5px var(--principal),
+                    0 0 8px var(--principal);
             }
         }
 
         .hero-subtitle {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.4rem;
-            color: #00ff88;
+            color: var(--principal);
             max-width: 800px;
             margin: 0 auto 48px;
             line-height: 1.5;
@@ -248,8 +262,8 @@
         }
 
         .philosophy h2 .accent {
-            color: #00ff88;
-            text-shadow: 0 0 10px #00ff88;
+            color: var(--principal);
+            text-shadow: 0 0 10px var(--principal);
         }
 
         .philosophy-text {
@@ -262,11 +276,11 @@
         .philosophy-highlight {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.2rem;
-            color: #00ff88;
+            color: var(--principal);
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border: 2px solid #00ff88;
+            border: 2px solid var(--principal);
             padding: 20px;
             border-radius: 0;
             background: rgba(0, 255, 136, 0.05);
@@ -298,8 +312,8 @@
             transform: translateX(-50%);
             width: 100px;
             height: 3px;
-            background: linear-gradient(90deg, #00ff88, #00ccff);
-            box-shadow: 0 0 10px #00ff88;
+            background: linear-gradient(90deg, var(--principal), var(--secondary));
+            box-shadow: 0 0 10px var(--principal);
         }
 
         .project-grid {
@@ -345,7 +359,7 @@
             justify-content: center;
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.1rem;
-            color: #00ff88;
+            color: var(--principal);
             border: 2px solid rgba(0, 255, 136, 0.3);
             position: relative;
             overflow: hidden;
@@ -410,7 +424,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
             font-weight: 600;
-            color: #00ccff;
+            color: var(--secondary);
             margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -426,7 +440,7 @@
             background: rgba(0, 255, 136, 0.1);
             padding: 20px;
             border-radius: 8px;
-            border-left: 4px solid #00ff88;
+            border-left: 4px solid var(--principal);
             border: 1px solid rgba(0, 255, 136, 0.3);
         }
 
@@ -434,7 +448,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
             font-weight: 600;
-            color: #00ff88;
+            color: var(--principal);
             margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -487,7 +501,7 @@
 
         .contact-button {
             display: inline-block;
-            background: linear-gradient(45deg, #00ff88, #00ccff);
+            background: linear-gradient(45deg, var(--principal), var(--secondary));
             color: #000000;
             padding: 20px 50px;
             border-radius: 0;
@@ -513,7 +527,7 @@
                 0 0 30px rgba(0, 255, 136, 0.8),
                 0 0 60px rgba(0, 255, 136, 0.5),
                 0 0 90px rgba(0, 255, 136, 0.3);
-            background: linear-gradient(45deg, #00ccff, #00ff88);
+            background: linear-gradient(45deg, var(--secondary), var(--principal));
         }
 
         /* Responsive */
@@ -588,24 +602,22 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #00ff88;
+            background: var(--principal);
             border-radius: 4px;
-            box-shadow: 0 0 10px #00ff88;
+            box-shadow: 0 0 10px var(--principal);
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #00ccff;
-            box-shadow: 0 0 15px #00ccff;
+            background: var(--secondary);
+            box-shadow: 0 0 15px var(--secondary);
         }
-            opacity: 1;
-            transform: translateY(0);
-        }
+
     </style>
 </head>
 <body>
     <header>
         <nav class="container">
-            <a href="#" class="logo">Seu Nome</a>
+            <a href="#" class="logo">GMorais</a>
             <ul class="nav-links">
                 <li><a href="#filosofia">Filosofia</a></li>
                 <li><a href="#projetos">Projetos</a></li>
@@ -617,19 +629,20 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Marketing que pensa<br>antes de executar</h1>
-                <p class="hero-subtitle">Especialista em estratégia, conteúdo, branding e UI/UX</p>
-                <p class="hero-description">Transformo problemas complexos em soluções claras através de briefings estruturados, research aprofundada e estratégias que alinham posicionamento à execução.</p>
+                <h1>Marketing Estratégico que gera resultados</h1>
+<p class="hero-subtitle">Transformando desafios em soluções efetivas.</p>
+<p class="hero-description">Estratégia, branding e UI/UX alinhados ao objetivo de negócio.</p>
             </div>
         </section>
 
         <section class="philosophy" id="filosofia">
             <div class="container">
                 <div class="philosophy-content fade-in">
-                    <h2>Por que o raciocínio vem primeiro</h2>
-                    <p class="philosophy-text">Todo projeto começa com uma pergunta: qual problema estamos realmente resolvendo? A partir daí, construo estratégias fundamentadas em dados, insights comportamentais e objetivos de negócio claros.</p>
-                    <p class="philosophy-text">Não faço "conteúdo por fazer". Cada campanha, cada rebrand, cada interface é pensada para gerar resultado mensurável e impacto real no posicionamento da marca.</p>
-                    <p class="philosophy-highlight">Se você busca profundidade estratégica e execução precisa, estamos falando a mesma língua.</p>
+                    <h2>Estratégia antes da execução</h2>
+<p class="philosophy-text">Cada projeto começa com uma pergunta: qual problema real estamos resolvendo?</p>
+<p class="philosophy-text">Construo estratégias com base em dados, insights de comportamento e objetivos claros de negócio.</p>
+<p class="philosophy-text">Nada de “conteúdo por fazer” — cada campanha, redesign ou interface é pensada para gerar impacto real e resultados mensuráveis.</p>
+<p class="philosophy-highlight">Se você valoriza estratégia e execução precisa, estamos alinhados.</p>
                 </div>
             </div>
         </section>
@@ -644,20 +657,19 @@
                             [Imagens da campanha, métricas, screenshots]
                         </div>
                         <div class="project-content">
-                            <h3>Reposicionamento Estratégico - Fintech</h3>
-                            <div class="project-challenge">
-                                <h4>Desafio</h4>
-                                <p>Startup fintech com produto inovador mas posicionamento confuso. Taxa de conversão baixa e messaging inconsistente entre canais.</p>
-                            </div>
-                            <div class="project-solution">
-                                <h4>Raciocínio</h4>
-                                <p>Mapeamento completo da jornada do usuário revelou desconexão entre proposta de valor e linguagem utilizada. Reestruturei o messaging priorizando benefícios concretos sobre features técnicas.</p>
-                                <p>Nova identidade visual e tom de voz aplicados consistentemente em landing pages, ads e comunicação pós-venda.</p>
-                            </div>
-                            <div class="project-results">
-                                <h4>Impacto</h4>
-                                <p>+127% na taxa de conversão, -43% no CAC e reconhecimento de marca aumentou 89% no público-alvo em 6 meses.</p>
-                            </div>
+                            <h3>Reposicionamento Estratégico – Fintech</h3>
+<div class="project-challenge">
+    <h4>Desafio</h4>
+    <p>Produto inovador, mas posicionamento confuso; conversão baixa e comunicação inconsistente entre canais.</p>
+</div>
+<div class="project-solution">
+    <h4>Solução</h4>
+    <p>Mapeei a jornada do usuário, identifiquei gaps na proposta de valor e redesenhei o messaging priorizando benefícios concretos. Nova identidade visual e tom de voz aplicados de forma consistente em landing pages, anúncios e pós-venda.</p>
+</div>
+<div class="project-results">
+    <h4>Resultados</h4>
+    <p>+127% na taxa de conversão, -43% no CAC e aumento de 89% no reconhecimento da marca em 6 meses.</p>
+</div>
                         </div>
                     </div>
 
@@ -666,20 +678,19 @@
                             [Wireframes, protótipos, testes A/B]
                         </div>
                         <div class="project-content">
-                            <h3>Redesign de Interface - E-commerce</h3>
-                            <div class="project-challenge">
-                                <h4>Desafio</h4>
-                                <p>E-commerce de moda com alta taxa de abandono de carrinho (78%) e jornada de compra confusa, especialmente no mobile.</p>
-                            </div>
-                            <div class="project-solution">
-                                <h4>Raciocínio</h4>
-                                <p>Research comportamental mostrou que usuários abandonavam por falta de confiança, não por preço. Redesenhei o checkout priorizando transparência e reduzindo fricções.</p>
-                                <p>Implementei sistema de prova social inteligente e simplifiquei formulários baseado em heatmaps e testes de usabilidade.</p>
-                            </div>
-                            <div class="project-results">
-                                <h4>Impacto</h4>
-                                <p>Taxa de abandono caiu para 31%, ticket médio subiu 24% e NPS aumentou de 6.2 para 8.7.</p>
-                            </div>
+                            <h3>Redesign de Interface – E-commerce</h3>
+<div class="project-challenge">
+    <h4>Desafio</h4>
+    <p>Alta taxa de abandono de carrinho (78%) e jornada de compra confusa, especialmente no mobile.</p>
+</div>
+<div class="project-solution">
+    <h4>Solução</h4>
+    <p>Research mostrou que usuários abandonavam por falta de confiança, não por preço. Redesenhei o checkout priorizando transparência e reduzindo fricções, implementei prova social inteligente e simplifiquei formulários com base em heatmaps e testes de usabilidade.</p>
+</div>
+<div class="project-results">
+    <h4>Resultados</h4>
+    <p>Taxa de abandono caiu para 31%, ticket médio subiu 24% e NPS aumentou de 6.2 para 8.7.</p>
+</div>
                         </div>
                     </div>
 
@@ -688,20 +699,19 @@
                             [Gráficos de performance, criativos, dashboards]
                         </div>
                         <div class="project-content">
-                            <h3>Campanha de Performance - SaaS B2B</h3>
-                            <div class="project-challenge">
-                                <h4>Desafio</h4>
-                                <p>SaaS B2B com ciclo de venda longo precisava escalar aquisição mantendo qualidade de leads e CAC sustentável.</p>
-                            </div>
-                            <div class="project-solution">
-                                <h4>Raciocínio</h4>
-                                <p>Mapeei 3 personas distintas com dores e gatilhos diferentes. Criei funis segmentados com conteúdo específico para cada estágio da jornada.</p>
-                                <p>Estratégia multicanal integrando LinkedIn Ads, Google, email nurturing e retargeting inteligente baseado em comportamento no site.</p>
-                            </div>
-                            <div class="project-results">
-                                <h4>Impacto</h4>
-                                <p>+340% em MQLs qualificados, CAC reduziu 52% e taxa de fechamento subiu de 12% para 23%.</p>
-                            </div>
+                            <h3>Campanha de Performance – SaaS B2B</h3>
+<div class="project-challenge">
+    <h4>Desafio</h4>
+    <p>Ciclo de venda longo; necessidade de escalar aquisição mantendo qualidade de leads e CAC sustentável.</p>
+</div>
+<div class="project-solution">
+    <h4>Solução</h4>
+    <p>Mapeei 3 personas com dores e gatilhos distintos. Criei funis segmentados com conteúdo específico para cada estágio da jornada, integrando LinkedIn Ads, Google Ads, email nurturing e retargeting inteligente baseado em comportamento.</p>
+</div>
+<div class="project-results">
+    <h4>Resultados</h4>
+    <p>+340% em MQLs qualificados, CAC reduziu 52% e taxa de fechamento subiu de 12% para 23%.</p>
+</div>
                         </div>
                     </div>
 
@@ -712,9 +722,8 @@
         <section class="contact" id="contato">
             <div class="container">
                 <h2>Vamos conversar?</h2>
-                <p class="contact-text">Se você busca estratégia com substância e execução precisa, vamos trocar uma ideia. Trabalho com marcas que querem crescer com propósito e clareza.</p>
-                <a href="mailto:seu@email.com" class="contact-button">Iniciar Conversa</a>
-            </div>
+<p class="contact-text">Se você busca estratégia com substância e execução precisa, vamos trocar uma ideia. Trabalho com marcas que querem crescer com propósito e clareza.</p>
+<a href="mailto:seu@email.com" class="contact-button">Iniciar Conversa</a>
         </section>
     </main>
 
